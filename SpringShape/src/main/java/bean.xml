@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="cir" class="sprdemo.SpringShape.Circle">
+		<constructor-arg value="red"></constructor-arg>
+	</bean>
+	
+	<bean id="rect" class="sprdemo.SpringShape.Rectangle">
+		<property name="color" value="green"></property>
+	</bean>
+	
+	<bean id="kiran" class="sprdemo.SpringShape.Painter">
+		<constructor-arg ref="rect"></constructor-arg>	</bean>
+	
+
+</beans>
